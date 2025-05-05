@@ -13,17 +13,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.ref == 'refs/heads/master' && github.ref == 'refs/heads/master'
-
     strategy:
       matrix:
         node-version: [20.x]
 
     steps:
       - uses: actions/checkout@v2
-
-      - run: npm ci
-      - run: npm run build
+      
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn run build
 
       - name: rsync deployments
         uses: burnett01/rsync-deployments@5.1
