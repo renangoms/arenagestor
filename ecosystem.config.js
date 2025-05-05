@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'api_cigamweb',
+    name: 'api_cigamwebs',
     script: 'main.js',
     env: {
       DATABASE_URL: 'postgresql://supervisor:-9rstz4wNe2zHTRsSDrYEQ@sport-booking-app-14948.7tt.aws-us-east-1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full',
